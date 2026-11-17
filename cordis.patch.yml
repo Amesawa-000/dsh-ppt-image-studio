@@ -1,0 +1,4 @@
+- insert:
+    - id: ppt-image-studio
+      name: dsh-ppt-image-studio
+      config: {}

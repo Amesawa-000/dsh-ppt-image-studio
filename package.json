@@ -1,0 +1,51 @@
+{
+  "name": "dsh-ppt-image-studio",
+  "version": "1.0.0",
+  "description": "PPT 配图工坊：图形化配置生图 API，支持 agent 自动编写提示词并生成配图。",
+  "author": "十二水合季风",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "studio.js",
+    "adapters.js",
+    "client.js",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "adapters.test.js",
+    "studio.test.js",
+    "host.test.js"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.3 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "scripts": {
+    "test": "node --test --test-isolation=none adapters.test.js studio.test.js host.test.js"
+  }
+}
