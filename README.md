@@ -22,7 +22,13 @@
 
 这是 DSH 插件包，不放入 skills 目录。安装器会自动安装清单中的依赖。
 
-开发者也可安装源码目录，但本地目录安装采用链接，不会替源码目录安装依赖。请先在目录中运行 `pnpm install --ignore-scripts --node-linker=hoisted`，再让插件管理器安装该目录；之后不要移动或删除源码目录。更新已加载的 JavaScript 后须按 DSH 的提示重启，不能仅凭入口还在就认为新代码已生效。
+### 从 GitHub 安装
+
+1. 在仓库页面选择 **Code → Download ZIP**，或使用 `git clone` 获取源码。
+2. 解压后进入仓库目录，运行 `pnpm install --ignore-scripts --node-linker=hoisted`。
+3. 在 DSH 的 **插件 → 添加插件** 中选择该目录，确认安装并启用。
+
+源码目录安装采用链接，不会替源码目录安装依赖：请先在仓库目录运行 `pnpm install --ignore-scripts --node-linker=hoisted`，再让插件管理器安装该目录；之后不要移动或删除源码目录。更新已加载的 JavaScript 后须按 DSH 的提示重启。若只想安装发行包，使用上文的 tgz。
 
 ```text
 <插件目录>/ppt-image-studio/

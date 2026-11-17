@@ -5,6 +5,22 @@
   "author": "十二水合季风",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amesawa-000/dsh-ppt-image-studio.git"
+  },
+  "homepage": "https://github.com/Amesawa-000/dsh-ppt-image-studio#readme",
+  "bugs": {
+    "url": "https://github.com/Amesawa-000/dsh-ppt-image-studio/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "image-generation",
+    "ppt",
+    "openai-images",
+    "gemini"
+  ],
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
